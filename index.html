@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hands</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        background-color: #65868e;
+      }
+
+      #clock-body {
+        width: 850px;
+        background-color: rgb(220, 243, 245);
+        height: 850px;
+        border-radius: 50%;
+
+        position: relative;
+        border: 15px solid #00000099;
+        box-shadow: 5px 5px 10px rgb(0, 0, 0);
+      }
+
+      #dot {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        z-index: 10;
+        position: absolute;
+        background-color: black;
+      }
+
+      .second {
+        width: 800px;
+        height: 7px;
+        animation-duration: 60s;
+        z-index: 1;
+      }
+
+      .minute {
+        width: 700px;
+        animation-duration: 3600s;
+        height: 10px;
+      }
+
+      .hour {
+        width: 500px;
+        height: 15px;
+        animation-duration: 216000s;
+      }
+
+      .visible-part {
+        width: 50%;
+        border-radius: 10px;
+        height: inherit;
+        background-color: #424242;
+        border: 2px solid white;
+      }
+
+      .hands {
+        animation-name: rotate;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        position: absolute;
+        transform: rotate(90deg);
+      }
+
+      .sec-hand {
+        background-color: red;
+      }
+
+      .label {
+        width: 800px;
+        position: absolute;
+        height: 5px;
+        display: flex;
+        justify-content: space-between;
+
+        & div {
+          width: 5%;
+          background-color: #00000095;
+        }
+      }
+
+      .twelve-six {
+        transform: rotate(90deg);
+      }
+
+      .one-seven {
+        transform: rotate(120deg);
+      }
+
+      .two-eight {
+        transform: rotate(150deg);
+      }
+
+      .four-ten {
+        transform: rotate(210deg);
+      }
+
+      .five-eleven {
+        transform: rotate(240deg);
+      }
+
+      @keyframes rotate {
+        to {
+          transform: rotate(450deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clock-body"></div>
+    <div id="dot"></div>
+    <div class="hands second">
+      <div class="visible-part sec-hand"></div>
+    </div>
+    <div class="hands minute">
+      <div class="visible-part"></div>
+    </div>
+    <div class="hands hour">
+      <div class="visible-part"></div>
+    </div>
+    <div class="label three-nine">
+      <div></div>
+      <div></div>
+    </div>
+    <div class="label twelve-six">
+      <div></div>
+      <div></div>
+    </div>
+    <div class="label one-seven">
+      <div></div>
+      <div></div>
+    </div>
+    <div class="label two-eight">
+      <div></div>
+      <div></div>
+    </div>
+    <div class="label four-ten">
+      <div></div>
+      <div></div>
+    </div>
+    <div class="label five-eleven">
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>
