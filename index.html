@@ -218,6 +218,16 @@
         transform: rotate(240deg);
       }
 
+      #company {
+        position: absolute;
+        margin-top: 15%;
+        & span {
+          font-family: arial;
+          font-weight: bold;
+          font-size: 20x;
+        }
+      }
+
       @keyframes rotate {
         to {
           transform: rotate(450deg);
@@ -231,6 +241,7 @@
     <div class="hands second">
       <div class="visible-part sec-hand"></div>
     </div>
+    <div id="company"><span>MAX SILVER</span></div>
     <div class="hands minute">
       <div class="visible-part"></div>
     </div>
